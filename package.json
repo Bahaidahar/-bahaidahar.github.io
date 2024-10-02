@@ -4,10 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
     "start": "next start",
     "lint": "next lint",
-     "build": "next build && next export"
+    "build": "next build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",

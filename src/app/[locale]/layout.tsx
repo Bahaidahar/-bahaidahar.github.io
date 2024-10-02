@@ -5,6 +5,12 @@ import { getMessages } from "next-intl/server";
 import AnimatedBackground from "@/components/AnimatedBackground";
 import CustomCursor from "@/components/CustomCursor";
 import { Navigation } from "@/components/Navigation";
+import { locales } from "@/i18n";
+import { unstable_setRequestLocale } from "next-intl/server";
+
+export async function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
 const inter = Inter({ subsets: ["latin", "cyrillic"] });
 
@@ -20,6 +26,7 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
+  unstable_setRequestLocale(locale);
   const messages = await getMessages();
 
   return (

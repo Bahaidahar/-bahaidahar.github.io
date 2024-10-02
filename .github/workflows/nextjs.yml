@@ -79,7 +79,7 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
 
       - name: Export Next.js Site
-        run: ${{ steps.detect-package-manager.outputs.runner }} next export # Export the site to static HTML
+        run: ${{ steps.detect-package-manager.outputs.runner }} next build # Export the site to static HTML
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

@@ -10,7 +10,8 @@
   "Home": {
     "title": "Welcome to My Portfolio",
     "description": "I'm a passionate developer creating beautiful and functional web experiences.",
-    "cta": "View My Projects"
+    "cta": "View My Projects",
+    "about": "View About ME"
   },
   "About": {
     "title": "About Me",
@@ -26,10 +27,9 @@
   "Projects": {
     "title": "My Projects",
     "viewProject": "View Project",
-    "contact": "Contact",
     "ur-project": "Your Project Name",
     "how-contact": "How you connect with me?",
-    "message": "Hello! I would like to order a website or an application, could you tell me more?",
-    "cancel": "Close"
-  }
+    "message": "Hello! I would like to order a website or an application, could you tell me more?"
+  },
+  "contact": "Contact with me"
 }

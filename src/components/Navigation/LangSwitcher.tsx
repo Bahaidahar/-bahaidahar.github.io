@@ -41,12 +41,12 @@ const LangSwitcher = () => {
 
       {/* Dropdown content */}
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-24 bg-card rounded-md shadow-lg">
+        <div className="absolute -left-6 mt-2 w-24 rounded-md shadow-lg ">
           {locales.map((locale) => (
             <button
               key={locale}
               onClick={() => changeLanguage(locale)}
-              className="block w-full text-left px-4 py-2 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+              className="block w-full text-left px-4 py-2 text-sm text-muted-foreground hover:bg-white/20 hover:text-accent-foreground rounded-md"
             >
               {locale.toUpperCase()}
             </button>

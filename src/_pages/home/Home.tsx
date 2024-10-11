@@ -13,13 +13,13 @@ export default function Home() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="flex flex-col items-center justify-center min-h-[calc(100vh-100px)]"
+      className="flex flex-col items-center justify-center min-h-[calc(100vh-200px)]"
     >
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="text-4xl md:text-6xl font-bold text-center mb-6 bg-clip-text text-transparent bg-gradient-to-br from-purple-400 to-blue-400"
+        className="text-4xl md:text-6xl font-bold text-center mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-blue-300"
       >
         {t("title")}
       </motion.h1>
@@ -35,12 +35,23 @@ export default function Home() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.6 }}
+        className="flex flex-col gap-2 "
       >
         <Link
           href="/projects"
           className="group inline-flex items-center px-6 py-3 rounded-full dark:hover:bg-white/20 hover:bg-black/10 transition duration-300 ease-in-out"
         >
           {t("cta")}
+          <ArrowRightIcon
+            className="ml-2 group-hover:translate-x-1 transition duration-300 ease-in-out"
+            size={20}
+          />
+        </Link>
+        <Link
+          href="/about"
+          className="group inline-flex items-center justify-center px-6 py-3 rounded-full dark:hover:bg-white/20 hover:bg-black/10 transition duration-300 ease-in-out"
+        >
+          {t("about")}
           <ArrowRightIcon
             className="ml-2 group-hover:translate-x-1 transition duration-300 ease-in-out"
             size={20}

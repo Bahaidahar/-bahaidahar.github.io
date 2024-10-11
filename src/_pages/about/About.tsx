@@ -30,7 +30,7 @@ export default function About() {
           className="rounded-full shadow-lg object-cover size-[250px]"
         />
         <div className="w-full md:w-2/3">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-blue-300">
             {t("title")}
           </h1>
           <TabsTransitionPanel />

@@ -3,7 +3,6 @@ import {
   AlertDialogCancel,
   AlertDialogContent,
   AlertDialogDescription,
-  AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
@@ -37,15 +36,18 @@ export const Dialog = ({ triggerContent }: DialogProps) => {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
-        <button className="group inline-flex items-center px-6 py-3 rounded-full dark:hover:bg-white/20 hover:bg-black/10 transition duration-300 ease-in-out">
+        <footer className="z-20 fixed bottom-0 cursor-pointer hover:bg-white/10 w-full p-4 flex items-center justify-center gap-4 transition-all duration-300 ease-in-out">
           {triggerContent}
-        </button>
+        </footer>
       </AlertDialogTrigger>
-      <AlertDialogContent className=" bg-white/20 backdrop-blur-xl">
-        <AlertDialogHeader>
+      <AlertDialogContent className=" bg-white/20 backdrop-blur-xl ">
+        <AlertDialogHeader className="relative">
+          <AlertDialogCancel className=" absolute -right-10 -top-10 rounded-full border border-white/30 bg-white/10 size-[40px] hover:bg-white/20 transition-all duration-300 ease-in-out">
+            X
+          </AlertDialogCancel>
           <AlertDialogTitle>{t("how-contact")}</AlertDialogTitle>
           <AlertDialogDescription>
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 gap-4 mt-4">
               {messangers.map((item, index) => (
                 <Link
                   href={item.href}
@@ -53,16 +55,13 @@ export const Dialog = ({ triggerContent }: DialogProps) => {
                   target="_blank"
                   className="hover:scale-105 transition-all duration-300 ease-in-out hover:text-purple-200 cursor-pointer flex items-center gap-2"
                 >
-                  <FontAwesomeIcon icon={item.item} size="3x" />
+                  <FontAwesomeIcon icon={item.item} className=" size-[50px]" />
                   <p>{item.text}</p>
                 </Link>
               ))}
             </div>
           </AlertDialogDescription>
         </AlertDialogHeader>
-        <AlertDialogFooter>
-          <AlertDialogCancel>{t("cancel")}</AlertDialogCancel>
-        </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
   );

@@ -43,7 +43,7 @@ export default function Navigation() {
         >
           <Link
             href="/"
-            className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-purple-400 to-blue-400"
+            className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-blue-300"
           >
             {t("title")}
           </Link>
